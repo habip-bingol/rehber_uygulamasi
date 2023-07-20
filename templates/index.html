@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rehber Uygulaması</title>
+</head>
+<body>
+    <h1>Rehber</h1>
+    <ul>
+        {% for kisi in rehber %}
+        <li>{{ kisi.ad }} - {{ kisi.telefon }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/kisi_ekle" method="post">
+        <input type="text" name="ad" placeholder="Ad">
+        <input type="text" name="telefon" placeholder="Telefon">
+        <button type="submit">Kişi Ekle</button>
+    </form>
+</body>
+</html>
